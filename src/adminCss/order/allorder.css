@@ -39,7 +39,7 @@
 .order_list_container {
   width: 40%;
   max-height: 551px;
-  min-width: 350px;
+  min-width: 390px;
   overflow-y: scroll;
   margin: 10px;
   padding: 10px;

@@ -199,3 +199,21 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+.shop-prices-container{
+  background: #adaaaad0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+
+}
+.shop-price-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.shop-price-item input{
+  margin: 0 5px;
+}
