@@ -1,0 +1,160 @@
+.today-report {
+    padding: 20px;
+  }
+  
+  .report-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .report-box {
+    flex: 1 1 calc(33.333% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-box h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .report-box p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .top-products {
+    margin-top: 20px;
+  }
+  
+  .product-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-box h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+  
+  .product-box p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
+  
+
+  .product-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-box h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+  
+  .product-box p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
+  .date-picker {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .date-picker label {
+    margin-right: 10px;
+  }
+  
+  .date-picker input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+
+
+
+
+
+
+
+
+  /* src/App.css */
+.report-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  margin-top: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.report-item strong {
+  color: #333;
+}
+
+.report-item span {
+  font-weight: 500;
+  color: #555;
+}
+
+.top-selling-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.top-selling-table th,
+.top-selling-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.top-selling-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.top-selling-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.top-selling-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+  

@@ -1,0 +1,156 @@
+.main_admin_sidebar {
+  width: 240px;
+  background-color: var(--primary-color);
+  color: white;
+  position: fixed;
+  transition: width 0.5s;
+  z-index: 1000;
+}
+
+.admin_sidebar {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin_sidebar_header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.admin_sidebar_header_logo img {
+  max-width: 100%;
+}
+
+.admin_sidebar_menu_list {
+  padding: 20px;
+}
+
+.admin_sidebar_menu_items {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin_sidebar_menu_items.selected {
+  background-color: var(--secondary-color);
+}
+
+/* Sidebar Toggle Button */
+.toggleButton {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: right 0.3s;
+  z-index: 1001;
+}
+
+.main_admin_sidebar.closed .toggleButton {
+  right: -10px; /* Hide the button when sidebar is closed */
+}
+
+.closed {
+  width: 50px;
+}
+
+.closed .admin_sidebar_menu_list {
+  display: none;
+}
+
+.Link_tag {
+  text-decoration: none;
+  color: white;
+}
+
+.Link_tag:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .main_admin_sidebar {
+      position: fixed;
+      width: 15%;
+      height: 10px;
+      top: 0;
+      left: 0;
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1001;
+  }
+  
+
+  .admin_sidebar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-direction: row;
+  }
+
+  .admin_sidebar_header_logo img {
+      width: 40px;
+      height: auto;
+      display: none;
+  }
+
+  .admin_sidebar_menu_list {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0;
+  }
+
+  .admin_sidebar_menu_items {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+  }
+
+  .admin_sidebar_menu_items.selected {
+      background-color: var(--secondary-color);
+  }
+
+  .hamburger-menu {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: rgb(217, 25, 25);
+  }
+
+  .admin_sidebar_menu_list.mobile {
+      display: none;
+  }
+
+  .admin_sidebar_menu_list.show {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 10px 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1000;
+  }
+
+  /* Hide the Toggle Button on Mobile */
+  .toggleButton {
+      display: none;
+  }
+
+  .hamburger-menu.open + .admin_sidebar_menu_list {
+      display: flex;
+  }
+}
