@@ -313,7 +313,7 @@ const handleShopPriceChange = (e, index, field) => {
 
               {/* Shop Prices Section */}
    {/* Shop Prices Section */}
-<div className="form-section">
+   <div className="form-section">
   <h3>Shop Prices</h3>
   <div className="shop-prices-container">
     {formData.shopPrices
@@ -327,74 +327,108 @@ const handleShopPriceChange = (e, index, field) => {
           onDrop={(e) => handleDrop(e, index)}
           className="shop-price-item"
         >
-          <input
-            type="text"
-            value={shopPrice.shopname}
-            onChange={(e) => handleShopPriceChange(e, index, "shopname")}
-            className="shop-price-input"
-            placeholder="Shop Name"
-          />
-          <input
-            type="number"
-            value={shopPrice.price}
-            onChange={(e) => handleShopPriceChange(e, index, "price")}
-            className="shop-price-input"
-            placeholder="Price"
-          />
-          <input
-            type="number"
-            value={shopPrice.discountPercentage}
-            onChange={(e) => handleShopPriceChange(e, index, "discountPercentage")}
-            className="shop-price-input"
-            placeholder="Discount %"
-          />
-          <input
-            type="number"
-            value={shopPrice.FinalPrice || ""}
-            readOnly
-            className="shop-price-input"
-            placeholder="Final Price"
-          />
-          <input
-            type="text"
-            value={shopPrice.poistionId}
-            readOnly
-            className="shop-price-position-id"
-          />
-          <input
-            type="text"
-            value={shopPrice.ourprice}
-            onChange={(e) => handleShopPriceChange(e, index, "ourprice")}
-            className="shop-price-position-id"
-          />
-          <select
-            value={shopPrice.active}
-            onChange={(e) => handleShopPriceChange(e, index, "active")}
-            className="shop-price-select"
-          >
-            <option value="true">Active</option>
-            <option value="false">Inactive</option>
-          </select>
+          <div className="input-group">
+            <label htmlFor={`shopname-${index}`}>Shop Name</label>
+            <input
+              id={`shopname-${index}`}
+              type="text"
+              value={shopPrice.shopname}
+              onChange={(e) => handleShopPriceChange(e, index, "shopname")}
+              className="shop-price-input"
+              placeholder="Shop Name"
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor={`price-${index}`}>Price</label>
+            <input
+              id={`price-${index}`}
+              type="number"
+              value={shopPrice.price}
+              onChange={(e) => handleShopPriceChange(e, index, "price")}
+              className="shop-price-input"
+              placeholder="Price"
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor={`discountPercentage-${index}`}>Discount %</label>
+            <input
+              id={`discountPercentage-${index}`}
+              type="number"
+              value={shopPrice.discountPercentage}
+              onChange={(e) => handleShopPriceChange(e, index, "discountPercentage")}
+              className="shop-price-input"
+              placeholder="Discount %"
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor={`finalPrice-${index}`}>Final Price</label>
+            <input
+              id={`finalPrice-${index}`}
+              type="number"
+              value={shopPrice.FinalPrice || ""}
+              readOnly
+              className="shop-price-input"
+              placeholder="Final Price"
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor={`poistionId-${index}`}>Position ID</label>
+            <input
+              id={`poistionId-${index}`}
+              type="text"
+              value={shopPrice.poistionId}
+              readOnly
+              className="shop-price-position-id"
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor={`ourprice-${index}`}>Our Price</label>
+            <input
+              id={`ourprice-${index}`}
+              type="text"
+              value={shopPrice.ourprice}
+              onChange={(e) => handleShopPriceChange(e, index, "ourprice")}
+              className="shop-price-position-id"
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor={`active-${index}`}>Active</label>
+            <select
+              id={`active-${index}`}
+              value={shopPrice.active}
+              onChange={(e) => handleShopPriceChange(e, index, "active")}
+              className="shop-price-select"
+            >
+              <option value="true">Active</option>
+              <option value="false">Inactive</option>
+            </select>
+          </div>
 
           <button
-                          type="button"
-                          className="remove-button"
-                          onClick={() => handleRemoveShopPrice(index)}
-                        >
-                          Remove
-                        </button>
+            type="button"
+            className="remove-button"
+            onClick={() => handleRemoveShopPrice(index)}
+          >
+            Remove
+          </button>
         </div>
-        
       ))}
   </div>
   <button
-                  type="button"
-                  onClick={handleAddShopPrice}
-                  className="add-shop-price-button"
-                >
-                  Add Shop Price
-                </button>
+    type="button"
+    onClick={handleAddShopPrice}
+    className="add-shop-price-button"
+  >
+    Add Shop Price
+  </button>
 </div>
+
 
 
               {/* Category Section */}

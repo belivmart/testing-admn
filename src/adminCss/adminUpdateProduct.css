@@ -217,3 +217,150 @@
 .shop-price-item input{
   margin: 0 5px;
 }
+/* Base styles for the form section */
+.form-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.shop-prices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Shop price item styles */
+.shop-price-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.shop-price-input,
+.shop-price-position-id,
+.shop-price-select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.shop-price-input[readonly] {
+  background-color: #f2f2f2;
+}
+
+.shop-price-select {
+  cursor: pointer;
+}
+
+.remove-button {
+  grid-column: span 2;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+}
+
+.add-shop-price-button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.add-shop-price-button:hover {
+  background-color: #27ae60;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .shop-price-item {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
+  }
+
+  .remove-button {
+    grid-column: span 1;
+  }
+
+  .add-shop-price-button {
+    width: auto;
+  }
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+  .shop-price-item {
+    grid-template-columns: 1fr;
+  }
+
+  .remove-button {
+    grid-column: span 1;
+  }
+
+  .add-shop-price-button {
+    width: 100%;
+  }
+}
+
+/* Mobile Styles for devices with 500px width or less (max-width: 500px) */
+@media (max-width: 500px) {
+  .form-section {
+    padding: 16px;
+  }
+
+  .shop-price-item {
+    grid-template-columns: 1fr;
+    padding: 12px; /* Slightly smaller padding on smaller screens */
+  }
+
+  .shop-price-input,
+  .shop-price-position-id,
+  .shop-price-select {
+    font-size: 0.9rem; /* Smaller font size for better readability */
+  }
+
+  .remove-button {
+    padding: 6px 10px;
+    font-size: 0.875rem;
+  }
+
+  .add-shop-price-button {
+    padding: 10px 16px;
+    font-size: 0.875rem;
+  }
+}

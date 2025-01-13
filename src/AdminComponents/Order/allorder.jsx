@@ -146,9 +146,9 @@ function AllOrder() {
                         </div>
                         <div>
                           <p><b>Name:</b> {item?.productId?.name}</p>
-                          <p><b>Price:</b> ₹{item?.SingelProductPrice}</p>
+                          <p><b>Price:</b> ₹{item?.productId?.FinalPrice}</p>
                           <p><b>Quantity:</b> {item?.quantity}</p>
-                          <p><b>Final Price:</b> ₹{item?.FinalPrice}</p>
+                          <p><b>:</b>  ₹{item?.productId?.FinalPrice}  X {item?.quantity}</p>
                           {item?.shopname && <p  ><b>Shop Name:</b> <span style={{ backgroundColor: "red", padding: "5px 10px", borderRadius: "5px" }}>{item?.shopname}</span></p>}
                         </div>
                       </div>
